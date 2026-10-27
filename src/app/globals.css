@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+/* Tidewing brand tokens */
+@theme inline {
+  --color-abyss: #0b1f3a;
+  --color-flare: #ff5a36;
+  --color-lagoon: #19c3b1;
+  --color-sky: #5b8cff;
+  --color-sand: #f7f4ee;
+  --font-sans: var(--font-jakarta);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-sand);
+  color: var(--color-abyss);
+}
