@@ -30,7 +30,7 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
               <Logo />
             </div>
             <p className="hidden text-sm text-ink/60 lg:block">
-              Good afternoon, <span className="font-medium text-ink">{account.user.split(" ")[0]}</span>
+              Welcome back, <span className="font-medium text-ink">{account.user.split(" ")[0]}</span>
             </p>
             <AccountMenu user={account.user} email={account.email} company={account.company} />
           </div>
