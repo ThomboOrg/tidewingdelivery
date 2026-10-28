@@ -1,8 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Plus } from "lucide-react";
 import Logo from "@/components/Logo";
 import { account } from "@/lib/portal";
 import PortalNav, { AccountMenu } from "./PortalNav";
+
+export const metadata: Metadata = { robots: { index: false, follow: false } };
 
 export default function PortalLayout({ children }: { children: React.ReactNode }) {
   return (

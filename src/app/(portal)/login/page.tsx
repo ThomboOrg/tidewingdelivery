@@ -5,7 +5,7 @@ import Logo from "@/components/Logo";
 import { photos } from "@/lib/site";
 import LoginForm from "./LoginForm";
 
-export const metadata: Metadata = { title: "Log in" };
+export const metadata: Metadata = { title: "Log in", robots: { index: false } };
 
 export default function LoginPage() {
   return (

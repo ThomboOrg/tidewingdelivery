@@ -4,7 +4,11 @@ import { Mail, MessageCircle, Phone } from "lucide-react";
 import { faqs, photos } from "@/lib/site";
 import { Accordion, Select } from "@/components/ui";
 
-export const metadata: Metadata = { title: "Customer service" };
+export const metadata: Metadata = {
+  title: "Customer service",
+  description: "Get help with your shipment, read shipping FAQs, or talk to our sales team about business rates.",
+  alternates: { canonical: "/support" },
+};
 
 const field =
   "h-12 w-full rounded-lg border border-line bg-white px-4 outline-none transition focus:border-flare focus:ring-4 focus:ring-flare/15";

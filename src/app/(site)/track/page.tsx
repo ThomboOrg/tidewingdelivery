@@ -4,7 +4,11 @@ import Link from "next/link";
 import { Check, Circle, PackageSearch, Plane, Ship } from "lucide-react";
 import TrackForm from "@/components/TrackForm";
 
-export const metadata: Metadata = { title: "Track your shipment" };
+export const metadata: Metadata = {
+  title: "Track your shipment",
+  description: "Live status for Tidewing air and sea shipments, from pickup to proof of delivery.",
+  alternates: { canonical: "/track" },
+};
 
 const VALID = /^TW-\d{4}-\d{4}$/;
 
