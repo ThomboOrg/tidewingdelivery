@@ -1,3 +1,6 @@
+// ponytail: placeholder domain, set NEXT_PUBLIC_SITE_URL in production
+export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tidewing.example";
+
 const u = (id: string) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=1600&q=75`;
 
 export const photos = {

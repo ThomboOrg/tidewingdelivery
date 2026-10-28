@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { Clock, FileCheck2, ShieldCheck } from "lucide-react";
 import Quote from "./Quote";
 
-export const metadata: Metadata = { title: "Get a quote" };
+export const metadata: Metadata = {
+  title: "Get a quote",
+  description: "Instant air and sea freight quotes. Customs clearance and door-to-door delivery included.",
+  alternates: { canonical: "/ship" },
+};
 
 export default function ShipPage() {
   return (

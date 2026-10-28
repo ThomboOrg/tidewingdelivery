@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -19,7 +20,20 @@ import {
   Check,
 } from "lucide-react";
 import TrackForm from "@/components/TrackForm";
-import { photos, services, updates } from "@/lib/site";
+import { photos, services, siteUrl, updates } from "@/lib/site";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
+
+// Structured data so search engines can show the business name, logo and contact details.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Tidewing Logistics",
+  url: siteUrl,
+  logo: `${siteUrl}/icon.svg`,
+  description: "Global air and sea freight to 180+ countries.",
+  contactPoint: { "@type": "ContactPoint", telephone: "+233-30-000-0000", contactType: "customer service", availableLanguage: ["English", "French"] },
+};
 
 const quick = [
   { href: "/ship", icon: Box, title: "Ship now", body: "Find the right service" },
@@ -59,6 +73,7 @@ const reviews = [
 export default function Home() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Hero */}
       <section className="relative isolate bg-ink">
         <Image src={photos.ship} alt="" fill priority sizes="100vw" className="-z-10 object-cover opacity-60" />

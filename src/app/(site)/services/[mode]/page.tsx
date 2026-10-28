@@ -10,7 +10,7 @@ export const generateStaticParams = () => [{ mode: "air" }, { mode: "sea" }];
 
 export async function generateMetadata({ params }: PageProps<"/services/[mode]">): Promise<Metadata> {
   const s = services[(await params).mode as Mode];
-  return s ? { title: s.name, description: s.intro } : {};
+  return s ? { title: s.name, description: s.intro, alternates: { canonical: `/services/${(await params).mode}` } } : {};
 }
 
 export default async function ServicePage({ params }: PageProps<"/services/[mode]">) {
